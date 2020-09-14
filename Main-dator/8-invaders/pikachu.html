@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./pikachu.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* ****************************** */
+        /*        Ställ in canvas         */
+        /* ****************************** */
+        const eCanvas = document.querySelector("canvas");
+        eCanvas.width = 1200;
+        eCanvas.height = 1000;
+        var ctx = eCanvas.getContext("2d");
+
+        /* ****************************** */
+        /*    Variabler och objekten      */
+        /* ****************************** */
+
+        // Thanos
+        var thanos = {
+            x: Math.random() * 1200,
+            y: -40,
+            bild: new Image()
+        }
+
+        var thor = {
+            x: Math.random() * 1200,
+            y: -30,
+            bild: new Image()
+        }
+
+        // Futurama Fry
+        var fry = {
+            x: Math.random() * 1200,
+            y: -180,
+            bild: new Image()
+        }
+        // Homer
+        var homer = {
+            x: Math.random() * 1200,
+            y: -130,
+            bild: new Image()
+        }
+        // Ice king
+        var iceking = {
+            x: Math.random() * 1200,
+            y: -60,
+            bild: new Image()
+        }
+        // Deadpool
+        var deadpool = {
+            x: Math.random() * 1200,
+            y: -100,
+            bild: new Image()
+        }
+        // Rick
+        var rick = {
+            x: Math.random() * 1200,
+            y: -200,
+            bild: new Image()
+        }
+        // Groot
+        var groot = {
+            x: Math.random() * 1200,
+            y: -230,
+            bild: new Image()
+        }
+        var lacasa = {
+            x: 600,
+            y: 900,
+            bild: new Image()
+        }
+
+
+
+
+        /* Ladda in bilderna */
+        //Thanos figuren
+        thanos.bild.src = "./ikoner/icons8-thanos-50.png";
+
+        //Thor figuren
+        thor.bild.src = "./ikoner/icons8-thor-50.png";
+
+        //Futurama Fry figuren
+        fry.bild.src = "./ikoner/icons8-futurama-fry-50.png";
+
+        //Homer figuren
+        homer.bild.src = "./ikoner/icons8-homer-simpson-50.png";
+
+        //Ice king figuren
+        iceking.bild.src = "./ikoner/icons8-ice-king-50.png";
+
+        //Deadpool figuren
+        deadpool.bild.src = "./ikoner/icons8-deadpool-50.png";
+
+        //Rick Sanchez figuren
+        rick.bild.src = "./ikoner/icons8-rick-sanchez-50.png";
+
+        //Groot figuren
+        groot.bild.src = "./ikoner/icons8-groot-50.png";
+
+        //La casa de papel figuren
+        lacasa.bild.src = "./ikoner/icons8-money-heist-dali-50.png";
+        /* ****************************** */
+        /*            Funktioner          */
+        /* ****************************** */
+        // Funktioner för att rita
+        function ritaThanos() {
+            if (thanos.y > 1000) {
+            thanos.x = Math.random() * 1200;   
+            thanos.y = 0;
+            }
+            ctx.drawImage(thanos.bild, thanos.x, thanos.y);
+        }
+
+        function ritaThor() {
+            if (thor.y > 1000) {
+            thor.x = Math.random() * 1200;   
+            thor.y = 0;
+            }
+            ctx.drawImage(thor.bild, thor.x, thor.y);
+        }
+
+        function ritaFry() {
+            if (fry.y > 1000) {
+            fry.x = Math.random() * 1200;   
+            fry.y = 0;
+            }
+            ctx.drawImage(fry.bild, fry.x, fry.y);
+        }
+
+        function ritaHomer() {
+            if (homer.y > 1000) {
+            homer.x = Math.random() * 1200;   
+            homer.y = 0;
+            }
+            ctx.drawImage(homer.bild, homer.x, fry.y);
+        }
+
+        function ritaIceking() {
+            if (iceking.y > 1000) {
+            iceking.x = Math.random() * 1200;   
+            iceking.y = 0;
+            }
+            ctx.drawImage(iceking.bild, iceking.x, iceking.y);
+        }
+
+        function ritaDeadpool() {
+            if (deadpool.y > 1000) {
+            deadpool.x = Math.random() * 1200;   
+            deadpool.y = 0;
+            }
+            ctx.drawImage(deadpool.bild, deadpool.x, deadpool.y);
+        }
+
+        function ritaRick() {
+            if (rick.y > 1000) {
+            rick.x = Math.random() * 1200;   
+            rick.y = 0;
+            }
+            ctx.drawImage(rick.bild, rick.x, rick.y);
+        }
+
+        function ritaGroot() {
+            if (groot.y > 1000) {
+            groot.x = Math.random() * 1200;   
+            groot.y = 0;
+            groot.y = 0;
+            }
+            ctx.drawImage(groot.bild, groot.x, groot.y);
+        }
+
+        function ritaLacasa() {
+            ctx.drawImage(lacasa.bild, lacasa.x, lacasa.y);
+        }
+
+        
+
+        /* Animationsloopen */
+        function loopen() {
+            /* Sudda ut canvas */
+            ctx.clearRect(0, 0, 1200, 1000);
+
+            thanos.y += 3;
+            ritaThanos();
+
+            fry.y += 3;
+            ritaFry();
+
+            thor.y += 3;
+            ritaThor();
+
+            homer.y += 3;
+            ritaHomer();
+
+            iceking.y += 3;
+            ritaIceking();
+
+            deadpool.y += 3;
+            ritaDeadpool();
+
+            rick.y += 3;
+            ritaRick();
+
+            groot.y += 3;
+            ritaGroot();
+
+            ritaLacasa();
+
+        
+            requestAnimationFrame(loopen);
+        }
+
+        /* ****************************** */
+        /*     Starta animationsloopen    */
+        /* ****************************** */
+        loopen();
+
+
+        // Få lacasa att röra på sig
+        window.addEventListener("keydown", function (e) {
+            switch (e.key) {
+                /* Gå höger med piltangent höger */
+                case "ArrowRight":
+                    lacasa.x += 10;
+                    break;
+                    /* Gå vänster med piltangent vänster */
+                case "ArrowLeft":
+                    lacasa.x -= 10;
+                    break;
+                    /* Gå upp med piltangent upp */
+                case "ArrowUp":
+                    lacasa.y -= 10;
+                    break;
+                    /* Gå ner med piltangent ner */
+                case "ArrowDown":
+                    lacasa.y += 10;
+                    break;
+            }
+        });
+        
+    </script>
+</body>
+</html>

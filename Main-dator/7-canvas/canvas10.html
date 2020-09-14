@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector("canvas");
+
+        /* Ställ in bredd och höjd på canvas */
+        eCanvas.width = 1300;
+        eCanvas.height = 1000;
+
+        /* Aktivera ritmotorn */
+        var ctx = eCanvas.getContext("2d");
+
+        /* Välj en färg */
+        
+        ctx.font = "24px sans-serif";
+
+       /* Skapa en natthimmel: olika stora stjärnor mot en svart backgrund */
+       ctx.fillStyle = "black"
+        ctx.fillRect(0, 0, 1300, 1000);
+
+        ctx.fillStyle = "white";
+        for(i = 1; i<=100; i+=1){
+        var x = Math.ceil(Math.random() * 1300);
+        var y = Math.ceil(Math.random() * 1000);
+        var w = Math.ceil(Math.random() * 20);
+        var h = w;
+        ctx.fillRect(x, y, w, h);
+        }
+        
+    </script>
+</body>
+</html>

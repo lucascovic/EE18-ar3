@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector("canvas");
+
+        /* Ställ in bredd och höjd på canvas */
+        eCanvas.width = 800;
+        eCanvas.height = 600;
+
+        /* Aktivera ritmotorn */
+        var ctx = eCanvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(100, 100);
+        ctx.lineTo(100, 600);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(100, 100);
+        ctx.lineTo(400, 100);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(350, 100);
+        ctx.lineTo(350, 150);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.arc(350, 200, 50, 0, 2 * Math.PI)
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(350, 250);
+        ctx.lineTo(350, 400);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(350, 300);
+        ctx.lineTo(400, 350);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(350, 300);
+        ctx.lineTo(300, 350);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(350, 400);
+        ctx.lineTo(300, 450);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(350, 400);
+        ctx.lineTo(400, 450);
+        ctx.stroke();
+
+
+
+    </script>
+</body>
+</html>

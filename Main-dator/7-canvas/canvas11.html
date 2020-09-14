@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+<body>
+    <div class="kol2">
+        <canvas></canvas>
+        <div>
+            <h1>Flytta Mario</h1>
+            <div class="kol3">
+                <br><button id="up">&UpArrow;</button><br>
+                <button id="left">&LeftArrow;</button><br><button id="right">&RightArrow;</button>
+                <br><button id="down">&DownArrow;</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector("canvas");
+        const eUp = document.querySelector("#up")
+        const eLeft = document.querySelector("#left")
+        const eRight = document.querySelector("#right")
+        const eDown = document.querySelector("#down")
+
+        /* Ställ in bredd och höjd på canvas */
+        eCanvas.width = 1200;
+        eCanvas.height = 1000;
+        var ctx = eCanvas.getContext("2d");
+
+
+        /* Ladda in bilden */
+        var mario = new Image();
+        mario.src = "./mario.png";
+
+        /* Kicka igång animationsloopen */
+        loopen();
+
+        /* ************  */
+        /* Funktioner  */
+        /* ************ */
+
+        /* Rita ut bilden */
+        var x = 100, y = 100;
+        function ritaMario() {
+            /* Öka med 2 */
+            /* x+= 2;
+            y+= 1; */
+            
+            ctx.drawImage(mario, x, y);
+        }
+
+
+        /* Animantionsloopen */
+        function loopen() {
+            /* Sudda ut hela canvas */
+            ctx.clearRect(0,0, 1200, 1000);
+
+            /* Rita Mario */
+            ritaMario();
+
+
+            requestAnimationFrame(loopen);
+        }
+
+        /* Lyssna på input */
+        eRight.addEventListener("click", function() {
+            /* Öka med 2 */
+            x += 2;
+        });
+        eLeft.addEventListener("click", function() {
+            /* Minska med 2 */
+            x -= 2;
+        });
+        eUp.addEventListener("click", function() {
+            /* Gå upp med 2 */
+            y -= 2;
+        });
+        eDown.addEventListener("click", function() {
+            /* Gå ner med 2 */
+            y += 2;
+        });
+
+    </script>
+</body>
+</html>

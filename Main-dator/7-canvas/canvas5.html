@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector("canvas");
+
+        /* Ställ in bredd och höjd på canvas */
+        eCanvas.width = 800;
+        eCanvas.height = 600;
+
+        /* Aktivera ritmotorn */
+        var ctx = eCanvas.getContext("2d");
+
+        /* Välj en färg */
+
+        ctx.fillStyle = "lightblue";
+        ctx.strokeStyle = "#454545";
+
+        /* Rita en rektangel */
+        ctx.fillRect(0, 0, 200, 50);
+        ctx.strokeRect(100, 100, 200, 50);
+
+        /* Rita en fyrkant med variabler */
+
+        var x = 100;
+        var y = 200;
+
+        ctx.fillStyle = "pink";
+        ctx.fillRect(x, y, 100, 50);
+
+
+        /* Rita en fyrkant till */
+
+        y = 300;
+        ctx.fillStyle = "purple";
+        ctx.fillRect(x, y, 100, 50);
+
+        /* Rita text */
+
+        ctx.font = "50px sans-serif";
+        ctx.fillText("Tjabba", 400, 100);
+        ctx.strokeText("Hej på dig", 400, 200);
+
+        /* Infoga en bild */
+        /*   var boar = new Image();
+          boar.src = "./boar_PNG31492.png";
+          boar.addEventListener("load", function(){
+              ctx.drawImage(boar, 300, 200)
+          }); */
+
+        /* Rita en gul rektangel */
+        var x = 100;
+        var y = 500;
+        var w = 70;
+        var h = 50;
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(x, y, w, h);
+
+        /* Sudda ut canvas */
+        ctx.clearRect(0, 0, 800, 600);
+
+        /* Loopa 5 gånger */
+        for (var i = 1; i < 6; i++) {
+            console.log(i);
+
+            for (var i = 100; i <= 500; i += 100)
+                console.log(i);
+
+        }
+
+        /* Rita 5 rektanglar på samma plats */
+        for (var i = 1; i < 6; i++) {
+            var x = 100;
+            var y = 100;
+            var w = 70;
+            var h = 50;
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(x, y, w, h);
+        }
+
+        /* Rita på rektanglar i y-led */
+        for (var y = 100; y <= 500; y += 100){
+            var x = 200;
+            var w = 70;
+            var h = 50;
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(x, y, w, h);
+                }
+
+    </script>
+</body>
+</html>

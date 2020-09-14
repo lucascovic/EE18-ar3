@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+<body>
+    <div class="kol2">
+        <canvas></canvas>
+        <div>
+            <h1>Flytta Mario</h1>
+            <div class="kol3">
+                <br><button id="up">&UpArrow;</button><br>
+                <button id="left">&LeftArrow;</button><br><button id="right">&RightArrow;</button>
+                <br><button id="down">&DownArrow;</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector("canvas");
+        const eUp = document.querySelector("#up")
+        const eLeft = document.querySelector("#left")
+        const eRight = document.querySelector("#right")
+        const eDown = document.querySelector("#down")
+
+        /* Ställ in bredd och höjd på canvas */
+        eCanvas.width = 1200;
+        eCanvas.height = 1000;
+        var ctx = eCanvas.getContext("2d");
+
+
+        /* Ladda in bilderna */
+        var mario = new Image();
+        var marioX = 100, marioY = 100;
+        mario.src = "./mario.png";
+
+        var bowser = new Image();
+        var bowserX = Math.ceil(Math.random() * 1000); 
+        var bowserY = Math.ceil(Math.random() * 1000);
+        var dx = 3; dy = 2;
+        bowser.src = "./bowser.png";
+
+        /* Kicka igång animationsloopen */
+        loopen();
+
+        /* ************  */
+        /* Funktioner  */
+        /* ************ */
+
+        /* Rita ut bilderna */
+        /* Funktion för att rita Mario */
+        function ritaMario() {
+
+            ctx.drawImage(mario, marioX, marioY);
+
+            
+        }
+
+        /* Funktion för att rita Bowser */
+        function ritaBowser() {
+            bowserX += dx;
+            bowserY += dy;
+            /* Om Bowser når bottenkanten, vds y > 1000 */
+            if (bowserY > 800) {
+                dy = -dy;
+            }
+            if (bowserX > 900) {
+                dx = -dx;
+            }
+            if (bowserX < 0) {
+                dx = - dx;
+            }
+            if (bowserY < 0) {
+                dy = -dy;
+            }
+            ctx.drawImage(bowser, bowserX, bowserY);
+        }
+
+
+        /* Animantionsloopen */
+        function loopen() {
+            /* Sudda ut hela canvas */
+            ctx.clearRect(0, 0, 1200, 1000);
+
+            /* Rita Mario */
+            ritaMario();
+
+            ritaBowser();
+
+            
+            requestAnimationFrame(loopen);
+        }
+
+        /* Lyssna på input */
+        eRight.addEventListener("click", function () {
+            /* Öka med 2 */
+            marioX += 2;
+        });
+        eLeft.addEventListener("click", function () {
+            /* Minska med 2 */
+            marioX -= 2;
+        });
+        eUp.addEventListener("click", function () {
+            /* Gå upp med 2 */
+            marioY -= 2;
+        });
+        eDown.addEventListener("click", function () {
+            /* Gå ner med 2 */
+            marioY += 2;
+        });
+
+        window.addEventListener("keydown", function (e) {
+            switch (e.key) {
+                    /* Gå höger med piltangent höger */
+                case "ArrowRight":
+                    marioX += 5;
+                    break;
+                    /* Gå vänster med piltangent vänster */
+                case "ArrowLeft":
+                    marioX -= 5;
+                    break;
+                    /* Gå upp med piltangent upp */
+                case "ArrowUp":
+                    marioY -= 5;
+                    break;
+                    /* Gå ner med piltangent ner */
+                case "ArrowDown":
+                    marioY += 5;
+                    break;
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

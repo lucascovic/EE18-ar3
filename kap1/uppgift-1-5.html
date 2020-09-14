@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>uppgift 1.5</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lämna en kommentar!</h1>
+        <form action="taemot.php" method="POST">
+            <label for="anamn">Ange namn</label>
+            <input id="anamn" class="form-control" type="text" name="anamn">
+            <label for="kommentar">Lämna din kommentar nedan</label>
+            <textarea class="form-control" name="kommentar" id="kommentar"></textarea>
+            <button type="submit" class="btn btn-primary">Skicka iväg din kommentar!</button>
+            
+           
+        </form>
+    </div>
+</body>
+</html>

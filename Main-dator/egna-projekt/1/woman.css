@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    /* background: url("./img/bg4.jpg"); */
+   background-color: #FFC6FF;
+    background-position-y: 80px;
+    background-position-x: -300px;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+width: 100%;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 925px;
+    
+}
+
+a.navbar-brand p{
+    color: #000;
+}
+a.nav-link p{
+    color: #000;
+}
+
+.navbar .cart img{
+    position: absolute;
+    left: 1850px;
+    top: 12px;
+}
+
+
+.panel-heading {
+    margin-top: 50px;
+    color: #000;
+    text-align: center;
+    
+}
+
+ 
+.panel-footer {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto;
+
+    
+}
+.panel-footer button{
+   /*  background-color: rgba(0, 0, 0, 0.418); */
+   background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.panel-body {
+    margin: 0 15px;
+    
+}
+/* .panel-body img{
+    width: 320px;
+    height: 480px;
+} */

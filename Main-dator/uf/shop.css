@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    /* background: url("./img/bg1.jpg"); */
+    background-position-y: 80px;
+    background-position-x: -500px;
+    background-color: #fff;
+    font-family: 'Lato', sans-serif; 
+    
+    
+}
+
+.container {
+    width: 100%;
+    }
+    nav{
+        position: sticky;
+    }
+    a.navbar-brand p{
+        color: #000;
+    }
+    a.nav-link p{
+        color: #000;
+    }
+    .navbar-brand {
+        position: absolute;
+        width: 120px;
+        left: 48%;
+        
+    }
+    .navbar .cart img{
+        position: absolute;
+        width: auto;
+        left: 1600px;
+        top: 12px;
+    }
+    
+    .panel-heading {
+        margin-top: 50px;
+        color: #000;
+        text-align: center;
+        
+    }
+    
+    
+    .panel-footer {
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        margin: 10px auto;
+    
+        
+    }
+    .panel-footer button{
+        background: none;
+        border: 1px solid black;
+        color: #000;
+        cursor: pointer;
+        padding: 7px;
+        outline: none;
+    }
+    
+    
+    
+    .panel-body {
+        margin: 0 15px;
+        
+    }

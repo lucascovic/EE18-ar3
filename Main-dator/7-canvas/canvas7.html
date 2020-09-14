@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector("canvas");
+
+        /* Ställ in bredd och höjd på canvas */
+        eCanvas.width = 800;
+        eCanvas.height = 600;
+
+        /* Aktivera ritmotorn */
+        var ctx = eCanvas.getContext("2d");
+
+        /* Välj en färg */
+
+        ctx.fillStyle = "lightblue";
+        ctx.strokeStyle = "#red";
+
+        /* Rita 5 små fyrkanter brevid varann */
+        /* x = 100, 200, 300, 400, 500 */
+        for (var x = 100; x <= 800; x+=100){
+            ctx.fillRect(x, 100, 50, 50);
+        }
+        ctx.fillStyle = "lightpink";
+        for (var x = 200; x <= 700; x+=100){
+            ctx.fillRect(x, 200, 50, 50);
+        }
+
+        ctx.fillStyle = "black";
+        for (var x = 300; x <= 700; x+=100){
+            ctx.fillRect(x, 300, 50, 50);
+        }
+
+    </script>
+</body>
+</html>

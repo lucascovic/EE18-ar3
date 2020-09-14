@@ -1,0 +1,120 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    /* background: url("../img/tokyo.jpg"); */
+    background-color: #CAFFBF;
+    background-position-y: 80px;
+    background-position-x: -500px;
+    
+}
+
+.container {
+width: 100%;
+
+}
+
+.ruta{
+    background: url(../img/tröja22-pg.png);
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    left: 400px;
+    top: 100px;
+}
+a.navbar-brand p{
+    color: #000;
+}
+a.nav-link p{
+    color: #000;
+}
+.navbar-brand {
+    position: absolute;
+    left: 925px;
+    
+}
+.navbar .cart img{
+    position: absolute;
+    left: 1850px;
+    top: 12px;
+}
+
+.container h1{
+    color: #000;
+    margin-left: 600px;
+    margin-top: 90px;
+    font-size: 40px;
+}
+.container p{
+    color: #000;
+    margin-left: 600px;
+    margin-top: 50px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.arrow h2{
+    margin-left: 75px;
+    margin-top: 25px;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+  .menu select{
+    
+    margin-left: 590px;
+    background: #CAFFBF;
+    outline: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .menu select:hover{
+      display: block;
+  }
+  
+
+  .addtocart button{
+    padding: 10px;
+    width: 150px;
+    border: 1px solid black;
+    background: none;
+    outline: none;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  a.button:hover{
+    text-decoration: none;
+  }

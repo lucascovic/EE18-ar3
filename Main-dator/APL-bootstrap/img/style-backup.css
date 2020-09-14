@@ -1,0 +1,886 @@
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+
+
+
+.kontainer .top {
+    width: 100%;
+    height: 320px;
+    text-align: center;
+}
+
+
+.kontainer .top .navbar {
+    height: 100px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    z-index: 1;
+
+}
+.top .navbar a {
+    font-size: 15px;
+    color: white;
+}
+
+/* h1, p, a, h2 {
+    font-family: 'Montserrat', sans-serif;
+} */
+
+body {
+    font: 18px 'Gilroy', sans-serif;
+}
+
+#toplogo {
+    margin-top: 20px;
+    width: 300px;
+    background-position: center;
+}
+
+
+.kontainer .rubrik {
+    font-size: 50px;
+    line-height: normal;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.kontainer .text {
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: black;
+    text-align: left;
+}
+
+.kontainer .citat {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #787878;
+    margin-top: 15px;
+}
+
+/* Center Text */
+.kontainer .center {
+    height: 100%;
+    margin: 0 30%;
+    margin-bottom: 200px;
+    margin-top: 100px;
+}
+
+
+
+/* Eventbilder */
+.kontainer .eventinfo {
+    margin: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    text-align: center;
+
+}
+.kontainer .eventinfo img {
+    width: 350px;
+    height: auto;
+}
+
+.float {
+    background: #f8f7f7;
+    width: auto;
+}
+
+.section {
+    width: 1500px;
+    margin: 30px auto 15px auto;
+    padding: 50px;
+    border-radius: 0px;
+}
+
+.section h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 75px;
+}
+
+.section img {
+    height: 600px;
+}
+.right {
+    float: right;
+    margin-left: 110px;
+}
+
+.left {
+    float: left;
+    margin-right: 110px;
+}
+
+.text-left {
+    text-align: center;
+}
+
+/* Event float section
+.kontainer .img-width{
+    width: 100%;
+    padding: 0 50px 50px 50px; 
+    margin-bottom: 200px;
+}
+.kontainer .img-width img{
+    height: 30%;
+    width: 30%;
+}
+.kontainer .img-width p{
+}
+.kontainer .left{
+    float: left;
+    margin-right: 10px;
+    margin-left: 150px;
+}
+.kontainer .right{
+    float: right;
+    margin-left: 10px;
+    margin-right: 150px;
+}
+.kontainer .imgtext{
+    margin-top: 30px;
+    
+}
+.kontainer .text-right{
+    text-align: right;
+    
+}
+  */
+
+/* Brands */
+
+.kontainer .brands {
+    text-align: center;
+    margin: 0 30%;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: inline;
+}
+
+.kontainer .brandinside p {
+    color: #FAFAFF;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+
+
+}
+
+.kontainer .brands .logos img {
+    height: auto;
+    width: 350px;
+}
+
+.brandsoutside {
+    padding: 75px;
+    width: cover;
+    background-color: white;
+}
+.brandinside {
+    background-color: #787878;
+    width: cover;
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+
+.white {
+    background-color: white;
+    width: cover;
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+
+.white .brands p {
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.whiteoutside {
+    padding: 75px;
+    width: cover;
+    background-color: #f8f7f7;
+}
+.smaller-logo {
+    width: 300px;
+    margin: auto;
+}
+
+/* 61 61 238 */
+
+
+.kontainer .partners p {
+    color: #FAFAFF;
+    text-align: center;
+    font-size: 100px;
+    font-size: 35px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    width: 50px;
+    margin: 20px auto 20px auto;
+}
+
+#whte {
+    margin: 0 150px 0 150px;
+}
+#preemie {
+    margin-top: 15px;
+}
+
+
+/* Portfolio */
+
+.portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1000px;
+    margin: 0 30%;
+}
+
+.kontainer .portfolio-all h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.kontainer .portfolio p {
+    width: 200px;
+    color: white;
+    font-size: 20px;
+}
+
+.portfolio a {
+    color: white;
+}
+
+.portfolio-all .rubrik {
+    color: white;
+
+}
+
+
+
+
+
+
+/* Image Slider */
+.carousel-inner, .carousel-indicator {
+    height: 500px;
+}
+
+.footer {
+    background: #f8f7f7;
+    width: 100%;
+    height: 400px;
+    color: black;
+
+}
+
+.block {
+    padding: 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+
+}
+
+.block h4 {
+    font-weight: bold;
+
+
+}
+
+.block p {
+    margin-top: 10px;
+}
+
+.blockcontent {
+    margin: 0 auto;
+}
+
+.social img {
+    width: 17px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Small devices (landscape phones, 370px and up) */
+@media (max-width: 320px) {
+
+    .kontainer {
+        width: 100%
+    }
+
+    .kontainer .rubrik {
+        font-size: 30px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .kontainer .text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 25px;
+        color: black;
+        text-align: left;
+    }
+
+    .kontainer .center {
+        height: 100%;
+        margin: 0 5%;
+        margin-bottom: 200px;
+        margin-top: 150px;
+    }
+
+
+    .kontainer .brands p {
+        color: #FAFAFF;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+
+    }
+
+    .kontainer .brands .logos img {
+        height: auto;
+        width: 150px;
+    }
+
+
+    #whte {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+
+    #collabs {
+        font-size: 30px;
+    }
+
+    .carousel-inner, .carousel-indicator {
+        height: 200px;
+    }
+
+    
+
+}
+
+/*  Small devices (landscape phones, 370px and up) */
+@media (max-width: 480px) {
+
+    .kontainer {
+        width: 100%
+    }
+
+    .kontainer .rubrik {
+        font-size: 30px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .kontainer .text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2000px;
+        line-height: 25px;
+        color: black;
+        text-align: left;
+    }
+
+    .kontainer .center {
+        height: 100%;
+        margin: 0 10%;
+        margin-bottom: 200px;
+        margin-top: 150px;
+    }
+
+
+    .kontainer .brands p {
+        color: #FAFAFF;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+
+    }
+
+    .kontainer .brands .logos img {
+        height: auto;
+        width: 150px;
+    }
+
+    .kontainer .grid-kontainer {
+        background-color: #787878;
+    }
+    #whte {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #preemie {
+        margin-top: 0px;
+    }
+
+    .carousel-inner, .carousel-indicator {
+        height: 320px;
+    }
+
+
+
+}
+
+
+@media (max-width: 600px) {
+
+    .kontainer {
+        width: 100%
+    }
+
+    .kontainer .rubrik {
+        font-size: 30px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .kontainer .text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 25px;
+        color: black;
+        text-align: left;
+    }
+
+    .kontainer .center {
+        height: 100%;
+        margin: 0 10%;
+        margin-bottom: 200px;
+        margin-top: 150px;
+    }
+
+
+    .kontainer .brands p {
+        color: #FAFAFF;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+
+    }
+
+    .kontainer .brands .logos img {
+        height: auto;
+        width: 150px;
+    }
+
+    #whte {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #preemie {
+        margin-top: 0px;
+    }
+
+    .carousel-inner, .carousel-indicator {
+        height: 320px;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+    .kontainer {
+        width: 100%
+    }
+
+    .kontainer .rubrik {
+        font-size: 30px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .kontainer .text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 25px;
+        color: black;
+        text-align: left;
+    }
+
+    .kontainer .center {
+        height: 100%;
+        margin: 0 10%;
+        margin-bottom: 200px;
+        margin-top: 150px;
+    }
+
+
+    .kontainer .brands p {
+        color: #FAFAFF;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+
+    }
+
+    .kontainer .brands .logos img {
+        height: auto;
+        width: 150px;
+    }
+
+    #whte {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #preemie {
+        margin-top: 0px;
+    }
+
+    .carousel-inner, .carousel-indicator {
+        height: 320px;
+    }
+
+
+}
+
+@media (max-width: 900px) {
+
+    .kontainer {
+        width: 100%
+    }
+
+    .kontainer .rubrik {
+        font-size: 30px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .kontainer .text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 25px;
+        color: black;
+        text-align: left;
+    }
+
+    .kontainer .center {
+        height: 100%;
+        margin: 0 10%;
+        margin-bottom: 200px;
+        margin-top: 150px;
+    }
+
+
+    .kontainer .brands p {
+        color: #FAFAFF;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+
+    }
+
+    .kontainer .brands .logos img {
+        height: auto;
+        width: 500px;
+    }
+
+    #whte {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #preemie {
+        margin-top: 0px;
+    }
+
+    #collabs {
+        font-size: 30 px;
+    }
+
+    .carousel-inner, .carousel-indicator {
+        height: 320px;
+    }
+
+
+}
+
+
+@media (max-width: 1024px) {
+
+    .kontainer {
+        width: 100%
+    }
+
+    .kontainer .rubrik {
+        font-size: 20px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .kontainer .text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .kontainer .center {
+        height: 100%;
+        margin: 0 20%;
+        margin-bottom: 200px;
+        margin-top: 150px;
+    }
+
+
+    .kontainer .brands p {
+        color: #FAFAFF;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+
+    }
+
+    .kontainer .brands .logos img {
+        height: auto;
+        width: 150px;
+    }
+
+    #whte {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #preemie {
+        margin-top: 0px;
+    }
+
+    .carousel-inner, .carousel-indicator {
+        height: 320px;
+    }
+
+
+
+}
+
+@media (max-width: 1200px) {
+
+    .kontainer {
+        width: 100%
+    }
+
+    .kontainer .rubrik {
+        font-size: 40px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .kontainer .text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 25px;
+        color: black;
+        text-align: left;
+    }
+
+    .kontainer .center {
+        height: 100%;
+        margin: 0 20%;
+        margin-bottom: 200px;
+        margin-top: 150px;
+    }
+
+
+    .kontainer .brands p {
+        color: #FAFAFF;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+
+    }
+
+    .kontainer .brands .logos img {
+        height: auto;
+        width: 300px;
+    }
+
+    #whte {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #preemie {
+        margin-top: 0px;
+    }
+
+    .carousel-inner, .carousel-indicator {
+        height: 320px;
+    }
+
+
+}
+
+
+/*  Medium devices (tablets, 768px and up) */
+
+/* }Bildspel */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/*  Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/*  Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector("canvas");
+
+        /* Ställ in bredd och höjd på canvas */
+        eCanvas.width = 1300;
+        eCanvas.height = 1000;
+
+        /* Aktivera ritmotorn */
+        var ctx = eCanvas.getContext("2d");
+
+        /* Välj en färg */
+        ctx.fillStyle = "#f9a3a3d0";
+        ctx.font = "24px sans-serif";
+
+        /* Slumpa fram ett tal 0.000... 0.99999..  */
+        var x =Math.random();
+        console.log(x);
+
+
+        var y = Math.random() * 10;
+        console.log(y);
+
+        /* Slumpa mellan 1-10 */
+        var i = Math.ceil(Math.random() * 10);
+        console.log(i);
+
+        /* Slumpa mellan 1-100 */
+        var j = Math.ceil(Math.random() * 100);
+        console.log(j);
+
+
+        /* Slumpa fram en fyrkant */
+        var x = Math.ceil(Math.random() * 800);
+        console.log(x);
+        
+        ctx.fillRect(x, 100, 50, 50);
+
+
+        /* Slumpa fram någonstans på canvas */
+        var x = Math.ceil(Math.random() * 800);
+        var y = Math.ceil(Math.random() * 600);
+        ctx.fillRect(x, y, 50, 50);
+
+        ctx.clearRect(0, 0, 1300, 1000);
+
+
+        /* Slumpa fram 10st fyrkanter */
+        for(i = 1; i<=100; i+=1){
+        var x = Math.ceil(Math.random() * 800);
+        var y = Math.ceil(Math.random() * 600);
+        var w = Math.ceil(Math.random() * 50);
+        var h = w;
+        ctx.fillRect(x, y, w, h);
+        }
+
+        
+    </script>
+</body>
+</html>

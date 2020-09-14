@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector("canvas");
+
+        /* Ställ in bredd och höjd på canvas */
+        eCanvas.width = 800;
+        eCanvas.height = 600;
+
+        /* Aktivera ritmotorn */
+        var ctx = eCanvas.getContext("2d");
+
+        /* Rita rektangel */
+        ctx.fillRect(100, 100, 200, 200)
+
+        /* Rita en färgad rektangel */
+        ctx.fillStyle = "darkblue";
+        ctx.fillRect(100, 400, 200, 100);
+
+        /* Rita en färgad rektangel */
+        ctx.fillStyle = "orange";
+        ctx.fillRect(100, 500, 200, 100);
+
+        /* Rita rutmönster */
+        ctx.fillStyle = "red";
+        ctx.fillRect(400, 100, 50, 50)
+        ctx.fillStyle = "green";
+        ctx.fillRect(450, 100, 50, 50)
+        ctx.fillStyle = "red";
+        ctx.fillRect(500, 100, 50, 50)
+        ctx.fillStyle = "green";
+        ctx.fillRect(400, 150, 50, 50)
+        ctx.fillStyle = "red";
+        ctx.fillRect(450, 150, 50, 50)
+        ctx.fillStyle = "green";
+        ctx.fillRect(500, 150, 50, 50)
+
+        /* Svenska flaggan */
+        ctx.fillStyle = "blue";
+        ctx.fillRect(400, 400, 200, 150);
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(450, 400, 30, 150);
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(400, 460, 200, 30);
+        
+        /* Rita en linje */
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(400, 300);
+        ctx.lineTo(500, 200);
+        ctx.strokeStyle = "#000"
+        ctx.stroke();
+
+    </script>
+</body>
+</html>

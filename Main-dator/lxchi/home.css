@@ -1,0 +1,40 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+</style>
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: wheat;
+    font-family: 'Modak', cursive;
+    color: #fff;
+}
+.container{
+width: 100%;
+
+}
+
+.titlar{
+grid-template-columns: 1fr 1fr;
+display: grid;
+margin: 300px 0 0 500px;
+}
+
+.navbar{
+    border: 1px solid #000;
+    background-color: #000;
+    padding: 10px;
+}
+#lxchilogo{
+    text-align: center;
+    
+}
