@@ -3,6 +3,7 @@
 /* Enkel CSS-reset */
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -25,51 +26,42 @@ ul {
 }
 
 body {
-    background: url("./img/sakrura.jpg");
-    font-family: 'Oxygen', sans-serif;
-    color: #fff;
-    width: 100%;
+ 
 }
-.section {
-    position: relative;
+.header{
+    background: url("./img/sakura-garden.png");
+    background-size: cover;
+    font-family: 'Oxygen', sans-serif;
+    color: #000;
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
 }
 .header h1 {
-    /* text-align: center;
+    text-align: center;
     font-size: 30px;
     font-family: 'Lato', sans-serif;
-    padding: 15px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 42%;
+    position: absolute;
+   
+}
+.header p{
     text-align: center;
-    
-    position: absolute; */
-    z-index: 1;
-    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 45%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-align: center;
-    width: 100%;
-}
-.header p {
-    z-index: 1;
-    margin: 0;
-    position: absolute;
-    top: 48%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-align: center;
-    width: 100%;
     font-size: 18px;
 }
-
+.arrow{
+    color: #fff;
+    margin-top: 30px;
+}
 .header h1 a {
     color: #fff;
     text-decoration: none;
@@ -88,9 +80,69 @@ body {
     text-decoration: none;
 
 }
-.video.container {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+
+.container, #container {
     width: 100%;
-}
+    margin: ;
+    }
+    .navbar{
+        margin: 0 auto;
+    }
+    a.navbar-brand p{
+        color: #000;
+    }
+    a.nav-link p{
+        color: #000;
+    }
+     .navbar-brand {
+    margin-right: 47%;
+        
+    }
+    
+    .cart{
+        position: absolute;
+        left: 85%;
+        top: 105%;
+        overflow: hidden;
+    }
+    #overlay:hover{
+        width: 250px;
+        height: auto;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    .panel-heading {
+        margin-top: 50px;
+        color: #000;
+        text-align: center;
+        
+    }
+    
+    
+    .panel-footer {
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        margin: 10px auto;
+    
+        
+    }
+    .panel-footer button{
+        background: none;
+        border: 1px solid black;
+        color: #000;
+        cursor: pointer;
+        padding: 7px;
+        outline: none;
+    }
+    
+    .panel-body {
+        margin: 0 15px;
+        
+    }
+@media only screen and (max-width: 600px) {
+    body {
+      background-repeat: no-repeat ;
+    }
+  }

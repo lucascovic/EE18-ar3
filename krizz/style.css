@@ -1,0 +1,10 @@
+body {
+    margin: 25px;
+    }
+    
+    #box {
+    background-color: #CCCC99;
+    width: 500px;
+    margin: 25px;
+    padding: 25px;
+    }

@@ -43,7 +43,7 @@ width: 100%;
     width: 500px;
     height: 600px;
     position: absolute;
-    top: 8%;
+    top: 30px;
 }
 a.navbar-brand p{
     color: #000;
@@ -53,8 +53,7 @@ a.nav-link p{
 }
 .navbar-brand {
     position: absolute;
-    width: 100%;
-    text-align: center;
+    left: 925px;
     
 }
 .navbar .cart img{
@@ -79,7 +78,7 @@ a.nav-link p{
 
 .arrow h2{
     margin-left: 75px;
-    margin-top: 25px;
+    margin-top: 100px;
 }
 a{
     color: #000;
