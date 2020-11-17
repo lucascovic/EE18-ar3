@@ -20,7 +20,7 @@
         // Skanna av katalogen
         $resultat = scandir($katalog);
         // Vad innehåller resultatet?
-        //var_dump($resultat);
+        var_dump($resultat);
 
         // Loopa igenom arrayen $resultat
         foreach ($resultat as $objekt) {
