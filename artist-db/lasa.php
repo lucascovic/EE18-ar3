@@ -51,7 +51,7 @@ include "./resurser/conn.php";
             echo "<h6>$rad[postDate]</h6>";
             echo "<h5>$rad[song]</h5>";
             echo "<p>$rad[postText]</p>";
-            echo "<img>$rad[bild]</img>";
+            echo "<img src=\"artist-db/$rad[bild]\">";
             echo "</div>";
         }
         // Steg 4: Stäng ner anslutning till databasen
