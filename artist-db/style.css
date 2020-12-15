@@ -13,7 +13,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 body {
-    background: #F9F6EB;
+    background: #72cdf7;
 }
 .kontainer {
     width: 600px;
@@ -95,9 +95,9 @@ table .fa {
     color: #55a5d2;
 }
 .inlägg{
-    background: #97d0f1;
+    background: #facdfd;
     padding: 2em;
-    border: 1px solid #467fb8;
+    border: 1px solid #000000;
     border-radius: 3px;
     margin: 2em;
 }
