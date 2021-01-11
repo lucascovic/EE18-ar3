@@ -101,3 +101,7 @@ table .fa {
     border-radius: 3px;
     margin: 2em;
 }
+.kontainer img{
+    width: 200px;
+    height: 200px;
+}

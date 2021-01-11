@@ -30,8 +30,8 @@ include "../resurser/conn.php";
             </ul>
         </nav>
         <form action="#" method="POST" enctype="multipart/form-data">
-            <label>Ange Artist <input type="text" name="artister"></label>
-            <label>Ange en låt från artist <input type="text" name="song"></label>
+            <label>Ange Artist <input type="text" name="artister" required></label>
+            <label>Ange en låt från artist <input type="text" name="song" required></label>
             <label>Skriv valfritt om artister <textarea name="postText"></textarea></label>
             <label>Lägg till bild</label>
             <input type="file" name="file">
