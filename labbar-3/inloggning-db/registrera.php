@@ -21,6 +21,12 @@ include "./resurser/conn.php";
     <div class="kontainer">
         <header>
             <h1>Inloggning</h1>
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link" href="./login.php">Logga in</a></li>
+                <li class="nav-item"><a class="nav-link" href="./logout.php">Logga ut</a></li>
+                <li class="nav-item"><a class="nav-link" href="./lista.php">Lista</a></li>
+                <li class="nav-item"><a class="nav-link active" href="./registrera.php">Registera</a></li>
+            </ul>
         </header>
         <main>
             <form action="#" method="post">
@@ -43,23 +49,30 @@ include "./resurser/conn.php";
             if ($fnamn && $enamn && $anamn && $lösen1 && $lösen2) {
 
                 // @TODO Kontrollera att användarnamnet inte redan finns!
+                $sql = "SELECT * FROM user WHERE anamn = '$anamn'";
+                $result = $conn->query($sql);
 
-                // Kontrollera att lösenorden matchat
-                if ($lösen1 == $lösen2) {
-
-                    // Räkna ut hash
-                    $hash = password_hash($lösen1, PASSWORD_DEFAULT);
-
-                    //sql sats
-                    $sql = "INSERT INTO user (  fnamn, enamn, anamn, hash) VALUES ('$fnamn', '$enamn', '$anamn', '$hash')";
-                    // Kör SQL
-                    $conn->query($sql);
-                    echo "<p>användaren är registrerad</p>";
-
-                    // Stäng ned anslutningen 
-                    $conn->close();
+                // Om användarnamnet inte finns gå vidare med registrering
+                if ($result->num_rows != 0) {
+                    echo "<p>Användarnamnet finns redan</p>";
                 } else {
-                    echo "<p>Lösenorden matchar inte, försök igen!</p>";
+                    // Annars skriv ut en varning
+                    // Kontrollera att lösenorden matchat
+                    if ($lösen1 == $lösen2) {
+
+                        // Räkna ut hash
+                        $hash = password_hash($lösen1, PASSWORD_DEFAULT);
+                        //sql sats
+                        $sql = "INSERT INTO user (  fnamn, enamn, anamn, hash) VALUES ('$fnamn', '$enamn', '$anamn', '$hash')";
+                        // Kör SQL
+                        $conn->query($sql);
+                        echo "<p>användaren är registrerad</p>";
+
+                        // Stäng ned anslutningen 
+                        $conn->close();
+                    } else {
+                        echo "<p>Lösenorden matchar inte, försök igen!</p>";
+                    }
                 }
             }
             ?>
