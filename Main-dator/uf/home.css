@@ -99,13 +99,7 @@ body {
     margin-right: 47%;
         
     }
-    
-    .cart{
-        position: absolute;
-        left: 85%;
-        top: 105%;
-        overflow: hidden;
-    }
+
     #overlay:hover{
         width: 250px;
         height: auto;
