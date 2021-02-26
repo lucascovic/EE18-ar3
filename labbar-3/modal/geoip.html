@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>geoip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+
+    </div>
+    <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script>
+        function visaLand() {
+            // Vi skall göra ett anrop mot ip-api
+            fetch("http://ip-api.com/json")     // Hämta 
+            .then(response => response.json())  // Packa upp paketet
+            .then(date => {                     // Nu gör vi något...
+            console.log(data.country);          // Vilket land är besökaren ifrån
+            console.log(data.city);             // Vilken stad är besökaren ifrån
+            })
+        }
+
+        visaLand();
+    </script>
+</body>
+</html>
