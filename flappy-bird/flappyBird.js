@@ -79,7 +79,7 @@ function draw(){
         // upptäck kontakt
         
         if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width && (bY <= pipe[i].y + pipeNorth.height || bY+bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height){
-            location.reload(); // reload the page
+            location.reload(); // ladda om sidan
         }
         
         if(pipe[i].x == 5){
