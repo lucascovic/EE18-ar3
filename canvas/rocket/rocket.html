@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+        // Element vi använder
+        const eCanvas = document.querySelector("canvas");
+
+        // Slå på ritmotrn
+        var ctx = eCanvas.getContext("2d");
+
+
+
+        // Rita ut en bild 
+        // Steg 1: Ladda in bilden
+        var rocket = new Image();
+        var moon = new Image();
+        moon.src = "../bilder/earth-moon-spacegettyimages.jpg"
+        rocket.src = "../bilder/rocket.png";
+        
+
+        // Anitmationsloopen
+        var x = 100;
+        var y = 600;
+        var speed = 2;
+        function loopen() {
+            // Sudda ut canvas
+            ctx.clearRect(0, 0, 800, 600)
+
+            //Rita ut
+            
+            ctx.drawImage(moon, 0, 0)
+            ctx.drawImage(rocket, x, y);
+
+            // Ändra positionen x-led
+            
+            // Ändra positionen y-led
+            y -= speed;
+
+            // Öka hastigheten
+            speed += 0.3;
+            requestAnimationFrame(loopen);
+        }
+        loopen();
+    </script>
+</body>
+</html>
