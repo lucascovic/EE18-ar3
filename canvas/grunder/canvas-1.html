@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+        // Element vi använder
+        const eCanvas = document.querySelector("canvas");
+
+        // Slå på ritmotrn
+        var ctx = eCanvas.getContext("2d");
+
+
+
+        // Rita ut en bild 
+        // Steg 1: Ladda in bilden
+        var diamant1 = new Image();
+        diamant1.src = "./bilder/diamant.png";
+        var diamant2 = new Image();
+        diamant2.src = "./bilder/diamant.png";
+
+        // Anitmationsloopen
+        var x1 = 0;
+        var x2 = 0;
+        var y1 = 0;
+        var y2 = 500;
+        function loopen() {
+            // Sudda ut canvas
+            ctx.clearRect(0, 0, 800, 600)
+
+            //Rita ut
+            ctx.drawImage(diamant1, x1, y1);
+            ctx.drawImage(diamant2, x2, y2);
+
+            // Ändra positionen x-led
+            x1 += 3;
+            x2 += 3;
+            // Ändra positionen y-led
+            y1++;
+            y2--;
+            requestAnimationFrame(loopen);
+        }
+        loopen();
+    </script>
+</body>
+</html>

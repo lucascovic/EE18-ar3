@@ -1,0 +1,9 @@
+body {
+    background-color: aquamarine;
+}
+canvas {
+     border: solid 1px #000;
+     background: #fff;
+     margin: auto;
+     display: block;
+}
