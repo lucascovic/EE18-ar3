@@ -38,6 +38,9 @@
             } else {
                 echo "<p>&#10005; Innehåller inte småbokstäver, 0-9, @ och -</p>";
             } 
+            } else {
+                echo "<p>&#10005; Innehåller inte småbokstäver, 0-9, @ och -</p>";
+            } 
 
             // Första tecknet måste vara en bokstav
             if (preg_match("/^[a-z]/", $text)) {
